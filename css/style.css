@@ -1,0 +1,47 @@
+body
+{
+    background-color: #1a222a;
+    font-family: Poppins;
+}
+
+#newsapp
+{
+    padding-top: 68px;
+}
+
+#newsapp > section
+{
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+/** Start Section Header Bar **/
+#news_header_bar
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background-color: rgba(26,34,42,0.95);
+    border-bottom: 1px solid rgba(135,228,176,0.04);
+    z-index: 99999;
+}
+
+.news_page_title_row
+{
+    padding-bottom: 20px;
+}
+
+#news_header_bar i.fa
+{
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+#news_header_bar i.fa-shopping-bag,
+#news_header_bar i.fa-search
+{
+    color: #87e4b0;
+}
+
