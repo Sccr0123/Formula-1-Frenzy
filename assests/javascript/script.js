@@ -1,6 +1,11 @@
 const apiKey = "27425ab90b3b573c3734673312a17aac";
 const curSeason = 2022
 
+var curRaces = [];
+var curConstructorsRank = [];
+var curDriversRank = [];
+
+
 //Shows Races Only (Subject To Change)
 function getForumlaOneRaces() {
 	fetch(
@@ -17,7 +22,8 @@ function getForumlaOneRaces() {
 			return response.json();
 		})
 		.then(function (data) {
-			console.log(data);
+			curRaces = data.response;
+			console.log(curRaces);
 		});
 };
 
@@ -36,7 +42,8 @@ function getForumlaDriversRankings() {
 			return response.json();
 		})
 		.then(function (data) {
-			console.log(data);
+			curDriversRank = data.response;
+			console.log(curDriversRank);
 		});
 };
 
@@ -55,7 +62,8 @@ function getForumlaConstructorsRankings() {
 			return response.json();
 		})
 		.then(function (data) {
-			console.log(data);
+			curConstructorsRank = data.response;
+			console.log(curConstructorsRank);
 		});
 };
 
