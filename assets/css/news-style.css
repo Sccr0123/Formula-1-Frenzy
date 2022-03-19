@@ -5,14 +5,13 @@
     --quaternary-color:#1e2e3b;
     --quinary-color:#293947;
     --senary-color:#208f9b;
-    --septenary-color:#1a222a;
     --octonary-color:rgba(255,255,255,0.5);
     --nonary-color: rgba(0,0,0,0.8);
 
 }
 body
 {
-    background-color: #1a222a;
+    background-color: var(--primary-color);
     font-family: Poppins;
 }
 
