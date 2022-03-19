@@ -16,206 +16,350 @@
 			rel="stylesheet"
 			href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		/>
-        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <link rel="stylesheet" href="./assests/css/style.css" type="text/css" />
 
 	</head>
 	<body>
         <!-- Header -->
-		<header>
-
-        </header>
+        <div class="row">
+            <header class = "col-4">
+                <h1>Formular 1 News App</h1>
+            </header>
+            <div class="col-2 text-right">
+                <button class="news_more_btn" type="button" id="searchbtn">
+                    Search
+                </button>
+            </div>
+            <div class="col-1 dropdown text-right">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#Upcoming">Upcoming</a>
+                    <a href="#Drivers">Driver's Standing</a>
+                    <a href="#News">News</a>
+                </div>
+            </div>
+            <div class="col-1">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            
+        </div>
+		
 		<!-- Next Race -->
         <row>
-
+            <div id="hero-image"> 
+                <img src="./images/img.jpeg" alt="eventpicture" height= "100%" width= "100%">
+                <div>
+                    <h2>title of the next race</h2>
+                </div>
+            </div>
         </row>
 
         <!-- Upcoming -->
         <row>
-
+            <section id="news_body_feature" class="col-12">
+                <div class="row news_page_category">
+                    <div class="col-10">
+                        <span class="section_title" id="Upcoming"> Upcoming </span>
+                    </div>
+                    <div class="col-2 text-right">
+                        <button class="news_more_btn" type="button">
+                            View All
+                        </button>
+                    </div>
+                </div>
+                <div class="row news_feature_teams">
+                    <div class="col-3">
+                        <div class="team_featured_tile">
+                            <img
+                                src="images/logo.png"
+                                alt=""
+                                class="team_brand"
+                            />
+                            <span class="team_img">
+                                <img src="images/img.jpeg" alt="" />
+                            </span>
+                            <span class="team_title">
+                                event name
+                                <span class="team_cat">
+                                    event time
+                                </span>
+                            </span>
+                            <span class="team_newstitle">
+                                <i class="fa fa-bolt"></i> event location
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="team_featured_tile">
+                            <img
+                                src="images/logo.png"
+                                alt=""
+                                class="team_brand"
+                            />
+                            <span class="team_img">
+                                <img src="images/img.jpeg" alt="" />
+                            </span>
+                            <span class="team_title">
+                                event name
+                                <span class="team_cat">
+                                    event time
+                                </span>
+                            </span>
+                            <span class="team_newstitle">
+                                <i class="fa fa-bolt"></i> event location
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="team_featured_tile">
+                            <img
+                                src="images/logo.png"
+                                alt=""
+                                class="team_brand"
+                            />
+                            <span class="team_img">
+                                <img src="images/img.jpeg" alt="" />
+                            </span>
+                            <span class="team_title">
+                                event name
+                                <span class="team_cat">
+                                    event time
+                                </span>
+                            </span>
+                            <span class="team_newstitle">
+                                <i class="fa fa-bolt"></i> event location
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="team_featured_tile">
+                            <img
+                                src="images/logo.png"
+                                alt=""
+                                class="team_brand"
+                            />
+                            <span class="team_img">
+                                <img src="images/img.jpeg" alt="" />
+                            </span>
+                            <span class="team_title">
+                                event name
+                                <span class="team_cat">
+                                    event time
+                                </span>
+                            </span>
+                            <span class="team_newstitle">
+                                <i class="fa fa-bolt"></i> event location
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </row>
 
         <!-- Driver's Standings -->
 
         <row>
-
+            <section id="news_body_feature" class="col-12">
+                <div class="row news_page_category">
+                    <div class="col-10">
+                        <span class="section_title" id="Drivers"> Driver's Standings </span>
+                    </div>
+                    <div class="col-2 text-right">
+                        <button class="news_more_btn" type="button">
+                            View All
+                        </button>
+                    </div>
+                </div>
+                <div class="row news_feature_teams">
+                    <div class="col-3">
+                        <div class="team_featured_tile">
+                            <img
+                                src="images/logo.png"
+                                alt=""
+                                class="team_brand"
+                            />
+                            <span class="team_img">
+                                <img src="images/img.jpeg" alt="" />
+                            </span>
+                            <span class="team_title">
+                                team name
+                                <span class="team_cat">
+                                    team category
+                                </span>
+                            </span>
+                            <span class="team_newstitle">
+                                <i class="fa fa-bolt"></i> news title
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="team_featured_tile">
+                            <img
+                                src="images/logo.png"
+                                alt=""
+                                class="team_brand"
+                            />
+                            <span class="team_img">
+                                <img src="images/img.jpeg" alt="" />
+                            </span>
+                            <span class="team_title">
+                                team name
+                                <span class="team_cat">
+                                    team category
+                                </span>
+                            </span>
+                            <span class="team_newstitle">
+                                <i class="fa fa-bolt"></i> news title
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="team_featured_tile">
+                            <img
+                                src="images/logo.png"
+                                alt=""
+                                class="team_brand"
+                            />
+                            <span class="team_img">
+                                <img src="images/img.jpeg" alt="" />
+                            </span>
+                            <span class="team_title">
+                                team name
+                                <span class="team_cat">
+                                    team category
+                                </span>
+                            </span>
+                            <span class="team_newstitle">
+                                <i class="fa fa-bolt"></i> news title
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="team_featured_tile">
+                            <img
+                                src="images/logo.png"
+                                alt=""
+                                class="team_brand"
+                            />
+                            <span class="team_img">
+                                <img src="images/img.jpeg" alt="" />
+                            </span>
+                            <span class="team_title">
+                                team name
+                                <span class="team_cat">
+                                    team category
+                                </span>
+                            </span>
+                            <span class="team_newstitle">
+                                <i class="fa fa-bolt"></i> news title
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </row>
 
         <!-- News -->
         <row>
-
+            <section id="news_body_feature" class="col-12">
+                <div class="row news_page_category">
+                    <div class="col-10">
+                        <span class="section_title" id="News"> News </span>
+                    </div>
+                    <div class="col-2 text-right">
+                        <button class="news_more_btn" type="button">
+                            View All
+                        </button>
+                    </div>
+                </div>
+                <div class="row news_feature_teams">
+                    <div class="col-3">
+                        <div class="team_featured_tile">
+                            <img
+                                src="images/logo.png"
+                                alt=""
+                                class="team_brand"
+                            />
+                            <span class="team_img">
+                                <img src="images/img.jpeg" alt="" />
+                            </span>
+                            <span class="team_title">
+                                team name
+                                <span class="team_cat">
+                                    team category
+                                </span>
+                            </span>
+                            <span class="team_newstitle">
+                                <i class="fa fa-bolt"></i> news title
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="team_featured_tile">
+                            <img
+                                src="images/logo.png"
+                                alt=""
+                                class="team_brand"
+                            />
+                            <span class="team_img">
+                                <img src="images/img.jpeg" alt="" />
+                            </span>
+                            <span class="team_title">
+                                team name
+                                <span class="team_cat">
+                                    team category
+                                </span>
+                            </span>
+                            <span class="team_newstitle">
+                                <i class="fa fa-bolt"></i> news title
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="team_featured_tile">
+                            <img
+                                src="images/logo.png"
+                                alt=""
+                                class="team_brand"
+                            />
+                            <span class="team_img">
+                                <img src="images/img.jpeg" alt="" />
+                            </span>
+                            <span class="team_title">
+                                team name
+                                <span class="team_cat">
+                                    team category
+                                </span>
+                            </span>
+                            <span class="team_newstitle">
+                                <i class="fa fa-bolt"></i> news title
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="team_featured_tile">
+                            <img
+                                src="images/logo.png"
+                                alt=""
+                                class="team_brand"
+                            />
+                            <span class="team_img">
+                                <img src="images/img.jpeg" alt="" />
+                            </span>
+                            <span class="team_title">
+                                team name
+                                <span class="team_cat">
+                                    team category
+                                </span>
+                            </span>
+                            <span class="team_newstitle">
+                                <i class="fa fa-bolt"></i> news title
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </row>
-		<div class="container-fluid">
-			<div id="newsapp" class="row">
-				<section id="news_header_title" class="col-12">
-					<div class="row news_page_category">
-						<div class="col-6">
-							<i class="fa fa-chevron-left"></i>
-							&nbsp; News App
-							<span class="news_page_title"> Formula 1 </span>
-						</div>
-					</div>
-				</section>
-
-				<!-- End Section Header Title -->
-
-				<!-- Start Section Body Part 1 -->
-				<section id="news_body" class="col-12">
-					<div class="row news_teams">
-						<div class="col-6">
-							<div class="team_tile active">
-								<img
-									src="images/logo.png"
-									alt=""
-									class="team_brand"
-								/>
-								<span class="team_title">
-									team name
-									<span class="team_cat">
-										team category
-									</span>
-								</span>
-								<span class="team_img">
-									<img src="images/img.jpeg" alt="" />
-								</span>
-								<span class="team_newstitle">
-									<i class="fa fa-bolt"></i> news title
-								</span>
-							</div>
-						</div>
-						<div class="col-6">
-							<div class="team_tile">
-								<img
-									src="images/logo.png"
-									alt=""
-									class="team_brand"
-								/>
-								<span class="team_title">
-									team name
-									<span class="team_cat">
-										team category
-									</span>
-								</span>
-								<span class="team_img">
-									<img src="images/img.jpeg" alt="" />
-								</span>
-
-								<span class="team_next">
-									<img
-										src="images/img.jpeg"
-										alt=""
-										class="next-thumb"
-									/>
-									<i class="fa fa-angle-right"></i>
-								</span>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- End Section Body Paert 1-->
-
-				<!-- Start Section Body Part 2 -->
-				<section id="news_body_feature" class="col-12">
-					<div class="row news_page_category">
-						<div class="col-8">
-							<span class="section_title"> Featured Teams </span>
-						</div>
-						<div class="col-4 text-right">
-							<button class="news_more_btn" type="button">
-								View All
-							</button>
-						</div>
-					</div>
-					<div class="row news_feature_teams">
-						<div class="col-3">
-							<div class="team_featured_tile">
-								<img
-									src="images/logo.png"
-									alt=""
-									class="team_brand"
-								/>
-								<span class="team_img">
-									<img src="images/img.jpeg" alt="" />
-								</span>
-								<span class="team_title">
-									team name
-									<span class="team_cat">
-										team category
-									</span>
-								</span>
-								<span class="team_newstitle">
-									<i class="fa fa-bolt"></i> news title
-								</span>
-							</div>
-						</div>
-						<div class="col-3">
-							<div class="team_featured_tile">
-								<img
-									src="images/logo.png"
-									alt=""
-									class="team_brand"
-								/>
-								<span class="team_img">
-									<img src="images/img.jpeg" alt="" />
-								</span>
-								<span class="team_title">
-									team name
-									<span class="team_cat">
-										team category
-									</span>
-								</span>
-								<span class="team_newstitle">
-									<i class="fa fa-bolt"></i> news title
-								</span>
-							</div>
-						</div>
-						<div class="col-3">
-							<div class="team_featured_tile">
-								<img
-									src="images/logo.png"
-									alt=""
-									class="team_brand"
-								/>
-								<span class="team_img">
-									<img src="images/img.jpeg" alt="" />
-								</span>
-								<span class="team_title">
-									team name
-									<span class="team_cat">
-										team category
-									</span>
-								</span>
-								<span class="team_newstitle">
-									<i class="fa fa-bolt"></i> news title
-								</span>
-							</div>
-						</div>
-						<div class="col-3">
-							<div class="team_featured_tile">
-								<img
-									src="images/logo.png"
-									alt=""
-									class="team_brand"
-								/>
-								<span class="team_img">
-									<img src="images/img.jpeg" alt="" />
-								</span>
-								<span class="team_title">
-									team name
-									<span class="team_cat">
-										team category
-									</span>
-								</span>
-								<span class="team_newstitle">
-									<i class="fa fa-bolt"></i> news title
-								</span>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- End Section Body Part 2 -->
-			</div>
-		</div>
-
-		<script src="javascript/script.js"></script>
+		<!-- <script src="javascript/script.js"></script> -->
 	</body>
 </html>
