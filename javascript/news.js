@@ -20,6 +20,11 @@ function getNews() {
       }
       //console logs all articles
       console.log(data.articles);
+      var newsObj = data.articles;
+      console.log(newsObj);
+      var newsObjStorage = JSON.stringify(newsObj);
+      localStorage.setItem("moreNews", newsObjStorage);
+      console.log(localStorage);
     });
 }
 
