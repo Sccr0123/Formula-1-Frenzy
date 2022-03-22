@@ -139,6 +139,15 @@ background-color: #293947;
     z-index: 1;
 }
 
+.news_page_category .section_title
+{
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 30px;
+    display: inline-block;
+    margin-left: 2%;
+}
+
 .news_more_btn
 {
     border: 1px solid rgba(255,255,255,0.5);
