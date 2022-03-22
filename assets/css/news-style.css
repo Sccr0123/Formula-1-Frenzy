@@ -12,7 +12,7 @@
 }
 body
 {
-    background-color: #1a222a;
+    background-color: var(--primary-color);
     font-family: Poppins;
 }
 
@@ -51,6 +51,11 @@ h1,h2
     background-size: cover;
 }
 
+.img {
+    display: flex;
+    justify-content: center;
+}
+
 span.news_page_title
 {
     display: block;
@@ -60,20 +65,7 @@ span.news_page_title
     text-transform: capitalize;
 }
 
-#news_body
-{
-    z-index: 2;
-}
-
-img.team_brand
-{
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    width: 20px;
-}
-
-.team_title
+.news_title
 {
     color: #fff;
     font-size: 12px;
@@ -83,27 +75,25 @@ img.team_brand
     display: block;
 }
 
-.team_img img
+.news img
 {
     height: 52px;
     left: 0;
     top: 0;
 }
 
-/** End Section Body Part 1 **/
-
-/** Start Section Body Part 2 **/
 /* Style The Dropdown Button */
 .dropbtn {
     border: 1px solid rgba(255,255,255,0.5);
     background: transparent;
     color: #fff;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 100;
     letter-spacing: 1px;
     border-radius: 10px;
     padding: 3px 15px;
 }
+
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
 display: none;
@@ -120,7 +110,7 @@ color: black;
 padding: 12px 16px;
 text-decoration: none;
 display: inline-flex;
-font-size: 10px;
+font-size: 15px;
 font-weight: 500;
 }
 
@@ -143,20 +133,10 @@ background-color: #293947;
 #news_body_feature
 {
     position: relative;
-    margin-top: -90px;
     background-color: #293947;
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     z-index: 1;
-}
-
-.news_page_category .section_title
-{
-    color: #fff;
-    font-size: 15px;
-    margin-bottom: 30px;
-    display: inline-block;
-    margin-left: 2%;
 }
 
 .news_more_btn
@@ -164,7 +144,7 @@ background-color: #293947;
     border: 1px solid rgba(255,255,255,0.5);
     background: transparent;
     color: #fff;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 100;
     letter-spacing: 1px;
     border-radius: 10px;
@@ -172,31 +152,19 @@ background-color: #293947;
 }
 
 
-.team_featured_tile
+.news_featured_tile
 {
     position: relative;
     background-color: rgba(255,255,255,0.05);
     border: 1px solid rgba(26,34,42,0.25);
     padding: 15px;
-    margin-bottom:60px;
     border-radius: 15px;
     height:auto;
+    display: flex;
+    justify-content: space-around;
 }
 
-.team_featured_tile .team_brand
-{
-    width: 25px;
-}
-
-.team_featured_tile .team_img
-{
-    position: relative;
-    margin-top: 20px;
-    display: block;
-}
-
-
-.team_featured_tile .team_title
+.news
 {
     color: #fff;
     font-size: 12px;
@@ -207,7 +175,7 @@ background-color: #293947;
     margin-top: 15px;
 }
 
-.team_featured_tile .team_cat
+.news_featured_tile .news_cat
 {
     display: block;
     color: rgba(255,255,255,0.5);
@@ -217,7 +185,7 @@ background-color: #293947;
     letter-spacing: 0.5px;   
 }
 
-.team_featured_tile .team_newstitle
+.news_featured_tile .news_newstitle
 {
     color: #fff;
     font-size: 12px;
