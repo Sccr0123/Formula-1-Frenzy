@@ -19,6 +19,10 @@ header a {
 	text-decoration: none;
 }
 
+.headline {
+    margin-bottom: 30px;
+}
+
 #newsapp {
 	padding-top: 68px;
 }
@@ -138,7 +142,7 @@ img.team_brand {
 
 .team_featured_tile .team_title {
 	color: #fff;
-	font-size: 12px;
+	font-size: 20px;
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
