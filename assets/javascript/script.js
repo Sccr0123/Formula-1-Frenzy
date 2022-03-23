@@ -152,7 +152,7 @@ function getForumlaDriversRankings() {
 			}
 			localStorage.setItem("Drivers", JSON.stringify(curDriversRank));
 
-			getTopFour();
+			getTopFour(curDriversRank);
 		});
 }
 
@@ -195,39 +195,42 @@ function getForumlaConstructorsRankings() {
 }
 
 function getNews() {
-  fetch("https://free-news.p.rapidapi.com/v1/search?q=%22formula%201%22&lang=en", {
-    method: "GET",
-    headers: {
-      "x-rapidapi-host": "free-news.p.rapidapi.com",
-      "x-rapidapi-key": "8de0284a1cmsh07a10a500bcd8fep183aa6jsn9849ab29551e",
-    },
-  })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      //console logs all articles
-      news = data.articles;
-      storeNews();
-      displayNews(news);
-    });
+	fetch(
+		"https://free-news.p.rapidapi.com/v1/search?q=%22formula%201%22&lang=en",
+		{
+			method: "GET",
+			headers: {
+				"x-rapidapi-host": "free-news.p.rapidapi.com",
+				"x-rapidapi-key":
+					"8de0284a1cmsh07a10a500bcd8fep183aa6jsn9849ab29551e",
+			},
+		}
+	)
+		.then(function (response) {
+			return response.json();
+		})
+		.then(function (data) {
+			//console logs all articles
+			news = data.articles;
+			storeNews();
+			displayNews(news);
+		});
 }
 
 function storeNews() {
-  localStorage.setItem("News", JSON.stringify(news));
+	localStorage.setItem("News", JSON.stringify(news));
 }
 
 function displayNews(news) {
-  console.log(news);
-  var newsTitle1El = document.querySelector("#newsarticle1");
-  var newsTitle2El = document.querySelector("#newsarticle2");
-  var newsTitle3El = document.querySelector("#newsarticle3");
-  var newsTitle4El = document.querySelector("#newsarticle4");
+	var newsTitle1El = document.querySelector("#newsarticle1");
+	var newsTitle2El = document.querySelector("#newsarticle2");
+	var newsTitle3El = document.querySelector("#newsarticle3");
+	var newsTitle4El = document.querySelector("#newsarticle4");
 
-  newsTitle1El.textContent = news[0].title;
-  newsTitle2El.textContent = news[1].title;
-  newsTitle3El.textContent = news[2].title;
-  newsTitle4El.textContent = news[4].title;
+	newsTitle1El.textContent = news[0].title;
+	newsTitle2El.textContent = news[1].title;
+	newsTitle3El.textContent = news[2].title;
+	newsTitle4El.textContent = news[4].title;
 }
 
 function getUpcoming() {
@@ -237,10 +240,10 @@ function getUpcoming() {
 				upcoming.push(curRaces[i]);
 			} else {
 				break;
-			};
-		};
-	};
-	
+			}
+		}
+	}
+
 	upcoming.shift();
 
 	//Upcoming 1
@@ -297,7 +300,7 @@ function getUpcoming() {
 
 	//Prints The Next Race Box
 	getNext();
-};
+}
 
 function getNext() {
 	var nextRace = {};
@@ -331,12 +334,12 @@ function getNext() {
 			$("#RaceDay").html(dayjs(nextRace.race).format("ddd"));
 			$("#RaceDate").html(dayjs(nextRace.race).format("MMMM DD"));
 			break;
-		};
-	};
-};
+		}
+	}
+}
 
-function getTopFour() {
-	var topFour = curDriversRank;
+function getTopFour(driverRank) {
+	var topFour = driverRank;
 	topFour.length = 4;
 
 	//1st Place
