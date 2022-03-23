@@ -74,3 +74,8 @@ display: block;
 .dropdown:hover .dropbtn {
 background-color: #293947;
 }
+
+.race {
+    margin: 0;
+    padding: 0;
+}
