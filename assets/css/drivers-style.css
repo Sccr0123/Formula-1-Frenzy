@@ -10,10 +10,6 @@
 	--nonary-color: rgba(0, 0, 0, 0.8);
 }
 
-* {
-	color: white;
-}
-
 body {
 	background-color: #1a222a;
 	font-family: Poppins;
@@ -21,6 +17,15 @@ body {
 
 header a {
 	text-decoration: none;
+}
+
+#newsapp {
+	padding-top: 68px;
+}
+
+#newsapp > section {
+	padding-top: 20px;
+	padding-bottom: 0;
 }
 
 h1,
@@ -32,56 +37,130 @@ h2 {
 	text-transform: uppercase;
 	align-items: center;
 	padding-left: 2%;
+	text-decoration: none;
 }
 
-/* Style The Dropdown Button */
+#searchbtn,
 .dropbtn {
+	margin-top: 10px;
+}
+
+#hero-image {
+	/* Set a specific width instead in the image*/
+	margin-bottom: 25px;
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center;
+	background-size: cover;
+}
+
+span.news_page_title {
+	display: block;
+	color: #fff;
+	font-size: 25px;
+	margin-top: 2px;
+	text-transform: capitalize;
+}
+
+#news_body {
+	z-index: 2;
+}
+
+img.team_brand {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 20px;
+}
+
+.team_title {
+	color: #fff;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	display: block;
+}
+
+.team_img img {
+	height: 200px;
+	left: 0;
+	top: 0;
+}
+
+/** End Section Body Part 1 **/
+
+/** Start Section Body Part 2 **/
+
+#news_body_feature {
+	position: relative;
+	background-color: #293947;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	z-index: 1;
+}
+
+.news_page_category .section_title {
+	color: #fff;
+	font-size: 20px;
+	margin-bottom: 30px;
+	display: inline-block;
+	margin-left: 2%;
+}
+
+.news_more_btn {
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	background: transparent;
 	color: #fff;
-	font-size: 10px;
+	font-size: 12px;
 	font-weight: 100;
 	letter-spacing: 1px;
 	border-radius: 10px;
 	padding: 3px 15px;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #5b7c8b;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
+.team_featured_tile {
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(26, 34, 42, 0.25);
+	border-radius: 15px;
+	height: auto;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: inline-flex;
-	font-size: 10px;
+.team_featured_tile .team_brand {
+	width: 25px;
+}
+
+.team_featured_tile .team_img {
+	position: relative;
+	margin-top: 20px;
+	/* display: block; */
+}
+
+.team_featured_tile .team_title {
+	color: #fff;
+	font-size: 12px;
 	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	display: inline-block;
+	margin-top: 15px;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-	background-color: rgba(255, 255, 255, 0.5);
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.team_featured_tile .team_cat {
 	display: block;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 9px;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-	background-color: #293947;
-}
-
-.race {
-	margin: 0;
-	padding: 0;
+.team_featured_tile .team_newstitle {
+	color: #fff;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	display: inline-block;
+	margin-top: 10px;
 }
