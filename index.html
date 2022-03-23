@@ -36,38 +36,38 @@
                 <div class="row">
                     <div class="col-12 col-lg-5 text-center text-white">
                         <div class="row">
-                            <h2 class="col-12 fs-1 fw-bold">Bahrain</h2>
-                            <h3 class="col-12 fs-2">March 18-20</h3>
+                            <h2 class="col-12 fs-1 fw-bold" id="GrandPrix"></h2>
+                            <h3 class="col-12 fs-2" id="EventDate">March 18-20</h3>
                             <div class="col-7 col-lg-10 mx-auto mt-3 bg-light rounded">
-                                <img class="img-fluid" src="https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Bahrain%20carbon.png.transform/4col-retina/image.png" alt="" />
+                                <img id="TrackImg"/>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-lg-7 m-auto mt-3 mt-0-lg text-center text-white">
                         <div class="row py-1">
                             <p class="col-5 fs-4">Practice 1</p>
-                            <p class="col-2 fs-4">Fri</p>
-                            <p class="col-5 fs-4">15:00-16:00</p>
+                            <p class="col-2 fs-4" id="P1Day">Fri</p>
+                            <p class="col-5 fs-4" id="P1Date">15:00-16:00</p>
                         </div>
                         <div class="row py-1">
                             <p class="col-5 fs-4">Practice 2</p>
-                            <p class="col-2 fs-4">Fri</p>
-                            <p class="col-5 fs-4">15:00-16:00</p>
+                            <p class="col-2 fs-4" id="P2Day">Fri</p>
+                            <p class="col-5 fs-4" id="P2Date">15:00-16:00</p>
                         </div>
                         <div class="row py-1">
                             <p class="col-5 fs-4">Practice 3</p>
-                            <p class="col-2 fs-4">Sat</p>
-                            <p class="col-5 fs-4">15:00-16:00</p>
+                            <p class="col-2 fs-4" id="P3Day">Sat</p>
+                            <p class="col-5 fs-4" id="P3Date">15:00-16:00</p>
                         </div>
                         <div class="row py-1">
                             <p class="col-5 fs-4">Qualifying</p>
-                            <p class="col-2 fs-4">Sat</p>
-                            <p class="col-5 fs-4">15:00-16:00</p>
+                            <p class="col-2 fs-4" id="QualDay">Sat</p>
+                            <p class="col-5 fs-4" id="QualiDate">15:00-16:00</p>
                         </div>
                         <div class="row py-1">
                             <p class="col-5 fs-4">Race</p>
-                            <p class="col-2 fs-4">Sun</p>
-                            <p class="col-5 fs-4">15:00-16:00</p>
+                            <p class="col-2 fs-4" id="RaceDay">Sun</p>
+                            <p class="col-5 fs-4" id="RaceDate">15:00-16:00</p>
                         </div>
                     </div>
                 </div>
@@ -92,54 +92,39 @@
                 <div class="row news_feature_teams">
                     <div class="col-xs-5 col-md-3">
                         <div class="team_featured_tile row">
-                            <div class="team_img col-6">
-                                <img src="./assets/images/img.jpeg" alt="" />
+                            <div class="team_img col-4">
+                                <img id="Upcoming1Img"/>
                             </div>
-                            <div class="textcolumn col-6">
-                                <div class="team_title">
-                                    event name
-                                    <div class="team_cat">
-                                        event time
-                                    </div>
-                                </div>
-                                <div class="team_newstitle">
-                                    <i class="fa fa-bolt"></i> event location
+                            <div class="textcolumn col-8">
+                                <div class="team_title" id="Upcoming1Name"></div>
+                                <div class="team_newstitle col-8">
+                                    <i class="fa fa-bolt" id="Upcoming1Date"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-5 col-md-3">
                         <div class="team_featured_tile row">
-                            <div class="team_img col-6">
-                                <img src="./assets/images/img.jpeg" alt="" />
+                            <div class="team_img col-4">
+                                <img id="Upcoming2Img"/>
                             </div>
-                            <div class="textcolumn col-6">
-                                <div class="team_title">
-                                    event name
-                                    <div class="team_cat">
-                                        event time
-                                    </div>
-                                </div>
-                                <div class="team_newstitle">
-                                    <i class="fa fa-bolt"></i> event location
+                            <div class="textcolumn col-8">
+                                <div class="team_title" id="Upcoming2Name"></div>
+                                <div class="team_newstitle col-8">
+                                    <i class="fa fa-bolt" id="Upcoming2Date"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-5 col-md-3">
                         <div class="team_featured_tile row">
-                            <div class="team_img col-6">
-                                <img src="./assets/images/img.jpeg" alt="" />
+                            <div class="team_img col-4">
+                                <img id="Upcoming3Img"/>
                             </div>
-                            <div class="textcolumn col-6">
-                                <div class="team_title">
-                                    event name
-                                    <div class="team_cat">
-                                        event time
-                                    </div>
-                                </div>
-                                <div class="team_newstitle">
-                                    <i class="fa fa-bolt"></i> event location
+                            <div class="textcolumn col-8">
+                                <div class="team_title" id="Upcoming3Name"></div>
+                                <div class="team_newstitle col-8">
+                                    <i class="fa fa-bolt" id="Upcoming3Date"></i>
                                 </div>
                             </div>
                         </div>
@@ -147,18 +132,13 @@
                     
                     <div class="col-xs-5 col-md-3">
                         <div class="team_featured_tile row">
-                            <div class="team_img col-6">
-                                <img src="./assets/images/img.jpeg" alt="" />
+                            <div class="team_img col-4">
+                                <img id="Upcoming4Img"/>
                             </div>
-                            <div class="textcolumn col-6">
-                                <div class="team_title">
-                                    event name
-                                    <div class="team_cat">
-                                        event time
-                                    </div>
-                                </div>
-                                <div class="team_newstitle">
-                                    <i class="fa fa-bolt"></i> event location
+                            <div class="textcolumn col-8">
+                                <div class="team_title" id="Upcoming4Name"></div>
+                                <div class="team_newstitle col-8">
+                                    <i class="fa fa-bolt" id="Upcoming4Date"></i>
                                 </div>
                             </div>
                         </div>
@@ -166,8 +146,7 @@
                 </div>
             </section>
         </row>
-
-	</row>
+    </row>
 
         <row>
             <section id="news_body_feature" class="col-12">
@@ -348,6 +327,11 @@
                 </div>
             </section>
         </row>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.0/dayjs.min.js"></script>
 		<script src="./assets/javascript/script.js"></script>
 	</body>
 </html>
