@@ -16,16 +16,11 @@
         <!-- Header -->
         <div class="row col-12">
           <header class = "col-11">
-              <h1>Formular 1 News App</h1>
+            <a href="./index.html">
+              <h1>Formula 1 News App</h1>
+            </a>
           </header>
-          <div class="col-1 dropdown text-right">
-              <button class="dropbtn">Dropdown</button>
-              <div class="dropdown-content">
-                  <a href="#Upcoming">Upcoming</a>
-                  <a href="#Drivers">Driver's Standing</a>
-                  <a href="#News">News</a>
-              </div>
-          </div>
+          
           <div class="col-1">
               <i class="fa-solid fa-magnifying-glass"></i>
           </div>
@@ -40,43 +35,62 @@
         </row>
     </header>
 				<!-- Start News Sections -->
-        <section id="news_body_feature" class="col-12">
-          <div class="col-12">
-            <div class="news_featured_tile">
-              <span class="news_img">
-                <img src="./assets/images/logo.png" alt="" />
-              </span>
-              <span class="news_title">
-                news title
-                <span class="news_cat">
-                  team category
-                </span>
-              </span>
-            </div>
-          </div>
-      </section>
-        <section id="news_body_feature" class="col-12">
-          <div class="col-12">
-            <div class="news_featured_tile">
-              <span class="news_img">
-                <img src="./assets/images/logo.png" alt="" />
-              </span>
-              <span class="news_title">
-                news title
-                <span class="news_cat">
-                  team category
-                </span>
-              </span>
-            </div>
-          </div>
-      </section>
-        <section id="news_body_feature" class="col-12">
+				<section id="news_body_feature" class="col-12">
+					<div class="row news_feature_teams">
 						<div class="col-12">
-							<div class="news_featured_tile">
-								<span class="news_img">
-									<img src="./assets/images/logo.png" alt="" />
+							<div class="team_featured_tile">
+								<img
+									src="images/logo.png"
+									alt=""
+									class="team_brand"
+								/>
+								<span class="team_img">
+									<img id="photo0" src="images/img.jpeg" alt="" />
 								</span>
-								<span class="news_title">
+								<span id="title0" class="team_title">
+									news title
+									<span class="team_cat">
+										team category
+									</span>
+								</span>
+								<p id="summary0"></p>
+							</div>
+						</div>
+				</section>
+        <section id="news_body_feature" class="col-12">
+					<div class="row news_feature_teams">
+						<div class="col-12">
+							<div class="team_featured_tile">
+								<img
+									src="images/logo.png"
+									alt=""
+									class="team_brand"
+								/>
+								<span class="team_img">
+									<img src="images/img.jpeg" alt="" />
+								</span>
+								<span id="title1" class="team_title">
+									news title
+									<span class="team_cat">
+										team category
+									</span>
+								</span>
+							</div>
+						</div>
+				</section>
+        <section id="news_body_feature" class="col-12">
+					<div class="row news_feature_teams">
+						<div class="col-12">
+							<div class="team_featured_tile">
+								<img
+									src="images/logo.png"
+									alt=""
+									class="team_brand"
+								/>
+								<span class="team_img">
+									<img src="images/img.jpeg" alt="" />
+								</span>
+								<span id="title2" class="team_title">
 									news title
 									<span class="news_cat">
 										team category
@@ -85,6 +99,8 @@
 							</div>
 						</div>
 				</section>
+
+				
 				<!-- End News Sections -->
 			</div>
 		</div>
