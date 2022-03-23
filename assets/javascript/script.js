@@ -110,7 +110,7 @@ function getForumlaOneRaces() {
 						case "1st Practice":
 							tempRank.race = data.response[i].date;
 							break;
-					};
+					}
 					curRaces.push(tempRank);
 				}
 			}
@@ -149,7 +149,7 @@ function getForumlaDriversRankings() {
 				tempRank.image = data.response[i].driver.image;
 				tempRank.team = data.response[i].team.name;
 				curDriversRank.push(tempRank);
-			};
+			}
 			localStorage.setItem("Drivers", JSON.stringify(curDriversRank));
 
 			getTopFour();
@@ -185,7 +185,10 @@ function getForumlaConstructorsRankings() {
 				tempRank.logo = data.response[i].team.logo;
 				curConstructorsRank.push(tempRank);
 			}
-			localStorage.setItem("Constructors", JSON.stringify(curConstructorsRank));
+			localStorage.setItem(
+				"Constructors",
+				JSON.stringify(curConstructorsRank)
+			);
 
 			// console.log(curConstructorsRank);
 		});
@@ -234,6 +237,7 @@ function getUpcoming() {
 	$("#Upcoming1Img").attr("alt", "Track Image");
 	$("#Upcoming1Img").attr("class", "bg-white");
 	$("#Upcoming1Name").html(upcoming[0].circuit);
+	$("#Upcoming1Date").attr("class", "fa fa-bolt");
 	$("#Upcoming1Date").html(
 		" " +
 			dayjs(upcoming[0].fp1).format("MMMM DD") +
@@ -246,6 +250,7 @@ function getUpcoming() {
 	$("#Upcoming2Img").attr("alt", "Track Image");
 	$("#Upcoming2Img").attr("class", "bg-white");
 	$("#Upcoming2Name").html(upcoming[1].circuit);
+	$("#Upcoming2Date").attr("class", "fa fa-bolt");
 	$("#Upcoming2Date").html(
 		" " +
 			dayjs(upcoming[1].fp1).format("MMMM DD") +
@@ -258,6 +263,7 @@ function getUpcoming() {
 	$("#Upcoming3Img").attr("alt", "Track Image");
 	$("#Upcoming3Img").attr("class", "bg-white");
 	$("#Upcoming3Name").html(upcoming[2].circuit);
+	$("#Upcoming3Date").attr("class", "fa fa-bolt");
 	$("#Upcoming3Date").html(
 		" " +
 			dayjs(upcoming[2].fp1).format("MMMM DD") +
@@ -270,16 +276,18 @@ function getUpcoming() {
 	$("#Upcoming4Img").attr("alt", "Track Image");
 	$("#Upcoming4Img").attr("class", "bg-white");
 	$("#Upcoming4Name").html(upcoming[3].circuit);
-	$("#Upcoming4Date").html(
-		" " +
-			dayjs(upcoming[3].fp1).format("MMMM DD") +
-			" - " +
-			dayjs(upcoming[3].race).format("DD")
-	);
+	$("#Upcoming4Date").attr("class", "fa fa-bolt");
+	$("#Upcoming4Date")
+			.html(
+				" " +
+					dayjs(upcoming[3].fp1).format("MMMM DD") +
+					" - " +
+					dayjs(upcoming[3].race).format("DD")
+			);
 
 	//Prints The Next Race Box
 	getNext();
-};
+}
 
 function getNext() {
 	var nextRace = {};
@@ -313,9 +321,9 @@ function getNext() {
 			$("#RaceDay").html(dayjs(nextRace.race).format("ddd"));
 			$("#RaceDate").html(dayjs(nextRace.race).format("MMMM DD"));
 			break;
-		};
-	};
-};
+		}
+	}
+}
 
 function getTopFour() {
 	var topFour = curDriversRank;
@@ -352,11 +360,11 @@ function getTopFour() {
 	$("#Driver4Name").html(`#1 ${topFour[3].name}`);
 	$("#Driver4Points").html(`${topFour[3].points} points`);
 	$("#Driver4Team").html(topFour[3].team);
+}
 
-	console.log(topFour);
-};
-
-getForumlaOneRaces();
-getForumlaDriversRankings();
-getForumlaConstructorsRankings();
-getNews();
+$(document).ready(function () {
+	getForumlaOneRaces();
+	getForumlaDriversRankings();
+	getForumlaConstructorsRankings();
+	getNews();
+});

@@ -5,8 +5,8 @@
 var news = [];
 
 function getNews() {
-  news = JSON.parse(localStorage.getItem("News"));
-  console.log(news);
-};
+	news = JSON.parse(localStorage.getItem("News"));
+	console.log(news);
+}
 
 getNews();
