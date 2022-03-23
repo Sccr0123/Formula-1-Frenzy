@@ -1,12 +1,16 @@
+//Creating Global Constants
 const apiKey = "27425ab90b3b573c3734673312a17aac";
 const curSeason = 2022;
 
+//Creating Global Variables
+var curDate = dayjs().format("YYYY-MM-DD");
 var curRaces = [];
 var curConstructorsRank = [];
 var curDriversRank = [];
 var news = [];
+var upcoming = [];
 
-//Shows Races Only (Subject To Change)
+//Gets Race Info Including Free Practice, Quali, Name, and Track Image
 function getForumlaOneRaces() {
 	fetch(`https://v1.formula-1.api-sports.io/races?season=${curSeason}`, {
 		method: "GET",
@@ -33,12 +37,15 @@ function getForumlaOneRaces() {
 
 				if (curRaces.length != 0) {
 					for (var x = 0; x < curRaces.length; x++) {
-						if (data.response[i].competition.name === curRaces[x].circuit) {
+						if (
+							data.response[i].competition.name ===
+							curRaces[x].circuit
+						) {
 							curTrack = x;
 							break;
-						};
+						}
 						curTrack = -1;
-					};
+					}
 					if (curTrack === -1) {
 						tempRank.circuit = data.response[i].competition.name;
 						switch (String(data.response[i].type)) {
@@ -47,30 +54,31 @@ function getForumlaOneRaces() {
 								tempRank.image = data.response[i].circuit.image;
 								break;
 							case "1st Qualifying":
-								tempRank.quali = "Added";
+								tempRank.quali = data.response[i].date;
 								break;
 							case "3rd Practice":
-								tempRank.fp3 = "Added";
+								tempRank.fp3 = data.response[i].date;
 								break;
 							case "2nd Practice":
-								tempRank.fp2 = "Added";
+								tempRank.fp2 = data.response[i].date;
 								break;
 							case "1st Practice":
-								tempRank.fp1 = "Added";
+								tempRank.fp1 = data.response[i].date;
 								break;
-						};
+						}
 						if (data.response[i].status != "Cancelled") {
 							curRaces.push(tempRank);
-						};
-
+						}
 					} else {
 						switch (String(data.response[i].type)) {
 							case "Race":
 								curRaces[curTrack].race = data.response[i].date;
-								curRaces[curTrack].image = data.response[i].circuit.image;
+								curRaces[curTrack].image =
+									data.response[i].circuit.image;
 								break;
 							case "1st Qualifying":
-								curRaces[curTrack].quali = data.response[i].date;
+								curRaces[curTrack].quali =
+									data.response[i].date;
 								break;
 							case "3rd Practice":
 								curRaces[curTrack].fp3 = data.response[i].date;
@@ -81,9 +89,8 @@ function getForumlaOneRaces() {
 							case "1st Practice":
 								curRaces[curTrack].fp1 = data.response[i].date;
 								break;
-						};
-					};
-		
+						}
+					}
 				} else {
 					tempRank.circuit = data.response[i].competition.name;
 					switch (String(data.response[i].type)) {
@@ -110,6 +117,7 @@ function getForumlaOneRaces() {
 				}
 			}
 			console.log(curRaces);
+			getUpcoming();
 		});
 }
 
@@ -144,7 +152,7 @@ function getForumlaDriversRankings() {
 				tempRank.team = data.response[i].team.name;
 				curDriversRank.push(tempRank);
 			}
-			console.log(curDriversRank);
+			// console.log(curDriversRank);
 		});
 }
 
@@ -177,7 +185,7 @@ function getForumlaConstructorsRankings() {
 				tempRank.logo = data.response[i].team.logo;
 				curConstructorsRank.push(tempRank);
 			}
-			console.log(curConstructorsRank);
+			// console.log(curConstructorsRank);
 		});
 }
 
@@ -202,42 +210,113 @@ function getNews() {
 			storeNews();
 		});
 }
+
 function storeNews() {
 	localStorage.setItem("News", JSON.stringify(news));
+}
+
+function getUpcoming() {
+	for (var i = 0; i < curRaces.length; i++) {
+		if (moment(curRaces[i].race).isSameOrAfter(curDate)) {
+			if (upcoming.length < 5) {
+				upcoming.push(curRaces[i]);
+			} else {
+				break;
+			}
+		}
+	}
+	upcoming.shift();
+	console.log(upcoming);
+
+	//Upcoming 1
+	$("#Upcoming1Img").attr("src", upcoming[0].image);
+	$("#Upcoming1Img").attr("alt", "Track Image");
+	$("#Upcoming1Img").attr("class", "bg-white");
+	$("#Upcoming1Name").html(upcoming[0].circuit);
+	$("#Upcoming1Date").html(
+		" " +
+			dayjs(upcoming[0].fp1).format("MMMM DD") +
+			" - " +
+			dayjs(upcoming[0].race).format("DD")
+	);
+
+	//Upcoming 2
+	$("#Upcoming2Img").attr("src", upcoming[1].image);
+	$("#Upcoming2Img").attr("alt", "Track Image");
+	$("#Upcoming2Img").attr("class", "bg-white");
+	$("#Upcoming2Name").html(upcoming[1].circuit);
+	$("#Upcoming2Date").html(
+		" " +
+			dayjs(upcoming[1].fp1).format("MMMM DD") +
+			" - " +
+			dayjs(upcoming[1].race).format("DD")
+	);
+
+	//Upcoming 3
+	$("#Upcoming3Img").attr("src", upcoming[2].image);
+	$("#Upcoming3Img").attr("alt", "Track Image");
+	$("#Upcoming3Img").attr("class", "bg-white");
+	$("#Upcoming3Name").html(upcoming[2].circuit);
+	$("#Upcoming3Date").html(
+		" " +
+			dayjs(upcoming[2].fp1).format("MMMM DD") +
+			" - " +
+			dayjs(upcoming[2].race).format("DD")
+	);
+
+	//Upcoming 4
+	$("#Upcoming4Img").attr("src", upcoming[3].image);
+	$("#Upcoming4Img").attr("alt", "Track Image");
+	$("#Upcoming4Img").attr("class", "bg-white");
+	$("#Upcoming4Name").html(upcoming[3].circuit);
+	$("#Upcoming4Date").html(
+		" " +
+			dayjs(upcoming[3].fp1).format("MMMM DD") +
+			" - " +
+			dayjs(upcoming[3].race).format("DD")
+	);
+
+	//Prints The Next Race Box
+	getNext();
+}
+
+function getNext() {
+	var nextRace = {};
+	for (var i = 0; i < curRaces.length; i++) {
+		if (moment(curRaces[i].race).isSameOrAfter(curDate)) {
+			nextRace = curRaces[i];
+
+			$("#GrandPrix").html(nextRace.circuit);
+
+			$("#EventDate").html(
+				dayjs(nextRace.fp1).format("MMMM DD") +
+					" - " +
+					dayjs(nextRace.race).format("DD")
+			);
+
+			$("#TrackImg").attr("src", nextRace.image);
+			$("#TrackImg").attr("alt", "Track Image");
+
+			$("#P1Day").html(dayjs(nextRace.fp1).format("ddd"));
+			$("#P1Date").html(dayjs(nextRace.fp1).format("MMMM DD"));
+
+			$("#P2Day").html(dayjs(nextRace.fp2).format("ddd"));
+			$("#P2Date").html(dayjs(nextRace.fp2).format("MMMM DD"));
+
+			$("#P3Day").html(dayjs(nextRace.fp3).format("ddd"));
+			$("#P3Date").html(dayjs(nextRace.fp3).format("MMMM DD"));
+
+			$("#QualiDay").html(dayjs(nextRace.quali).format("ddd"));
+			$("#QualiDate").html(dayjs(nextRace.quali).format("MMMM DD"));
+
+			$("#RaceDay").html(dayjs(nextRace.race).format("ddd"));
+			$("#RaceDate").html(dayjs(nextRace.race).format("MMMM DD"));
+			break;
+		}
+	}
 }
 
 getForumlaOneRaces();
 getForumlaDriversRankings();
 getForumlaConstructorsRankings();
 getNews();
-
-// switch (data.response[i].type) {
-// 								case "Race":
-// 									curRaces[x].race = "Added";
-// 								case "1st Qualifying":
-// 									curRaces[x].quali = "Added";
-// 								case "3rd Practice":
-// 									curRaces[x].fp3 = "Added";
-// 								case "2nd Practice":
-// 									curRaces[x].fp2 = "Added";
-// 								case "1st Practice":
-// 									curRaces[x].fp1 = "Added";
-// 							}
-// 						} else {
-// 							tempRank.circuit = data.response[i].competition.name;
-// 							switch (data.response[i].type) {
-// 								case "Race":
-// 									tempRank.race = data.response[i].date;
-// 								case "1st Qualifying":
-// 									tempRank.quali = "Added";
-// 								case "3rd Practice":
-// 									tempRank.fp3 = "Added";
-// 								case "2nd Practice":
-// 									tempRank.fp2 = "Added";
-// 								case "1st Practice":
-// 									tempRank.fp1 = "Added";
-// 							}
-// 							console.log(tempRank);
-// 							//curRaces.push(tempRank);
-// 						}
-// 					}
