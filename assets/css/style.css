@@ -193,7 +193,7 @@ background-color: #293947;
 {
     position: relative;
     margin-top: 20px;
-    display: block;
+    /* display: block; */
 }
 
 
@@ -225,6 +225,6 @@ background-color: #293947;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    display: block;
+    display: inline-block;
     margin-top: 10px;
 }
