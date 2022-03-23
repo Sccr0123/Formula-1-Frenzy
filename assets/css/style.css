@@ -144,7 +144,6 @@ background-color: #293947;
 #news_body_feature
 {
     position: relative;
-    margin-top: -90px;
     background-color: #293947;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -178,8 +177,6 @@ background-color: #293947;
     position: relative;
     background-color: rgba(255,255,255,0.05);
     border: 1px solid rgba(26,34,42,0.25);
-    padding: 15px;
-    margin-bottom:60px;
     border-radius: 15px;
     height:auto;
 }
@@ -193,7 +190,7 @@ background-color: #293947;
 {
     position: relative;
     margin-top: 20px;
-    display: block;
+    /* display: block; */
 }
 
 
@@ -225,6 +222,6 @@ background-color: #293947;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    display: block;
+    display: inline-block;
     margin-top: 10px;
 }
