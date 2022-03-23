@@ -1,0 +1,197 @@
+:root {
+	--primary-color: #1a222a;
+	--secondary-color: #5b7c8b;
+	--tertiary-color: #fff;
+	--quaternary-color: #1e2e3b;
+	--quinary-color: #293947;
+	--senary-color: #208f9b;
+	--septenary-color: #1a222a;
+	--octonary-color: rgba(255, 255, 255, 0.5);
+	--nonary-color: rgba(0, 0, 0, 0.8);
+}
+body {
+	background-color: var(--primary-color);
+	font-family: Poppins;
+}
+
+header a {
+	text-decoration: none;
+}
+
+#newsapp {
+	padding-top: 68px;
+}
+
+#newsapp > section {
+	padding-top: 20px;
+	padding-bottom: 0;
+}
+
+h1,
+h2 {
+	padding-top: 10px !important;
+	color: #5b7c8b;
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	align-items: center;
+	padding-left: 2%;
+}
+
+#searchbtn,
+.dropbtn {
+	margin-top: 10px;
+}
+
+#hero-image {
+	/* Set a specific width instead in the image*/
+	margin-bottom: 25px;
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center;
+	background-size: cover;
+}
+
+.img {
+	display: flex;
+	justify-content: center;
+}
+
+span.news_page_title {
+	display: block;
+	color: #fff;
+	font-size: 25px;
+	margin-top: 2px;
+	text-transform: capitalize;
+}
+
+.news_title {
+	color: #fff;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	display: block;
+}
+
+.news img {
+	height: 52px;
+	left: 0;
+	top: 0;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	background: transparent;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 100;
+	letter-spacing: 1px;
+	border-radius: 10px;
+	padding: 3px 15px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #5b7c8b;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: inline-flex;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+	background-color: #293947;
+}
+
+.fa-magnifying-glass {
+	color: white;
+}
+#news_body_feature {
+	position: relative;
+	background-color: #293947;
+	padding-top: 25px;
+	padding-bottom: 10px;
+	z-index: 1;
+}
+
+.news_page_category .section_title {
+	color: #fff;
+	font-size: 25px;
+	margin-bottom: 30px;
+	display: inline-block;
+	margin-left: 2%;
+}
+
+.news_more_btn {
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	background: transparent;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 100;
+	letter-spacing: 1px;
+	border-radius: 10px;
+	padding: 3px 15px;
+}
+
+.news_featured_tile {
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(26, 34, 42, 0.25);
+	padding: 15px;
+	border-radius: 15px;
+	height: auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+.news {
+	color: #fff;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	display: inline-block;
+	margin-top: 15px;
+}
+
+.news_featured_tile .news_cat {
+	display: block;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 9px;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.news_featured_tile .news_newstitle {
+	color: #fff;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	display: block;
+	margin-top: 10px;
+}
