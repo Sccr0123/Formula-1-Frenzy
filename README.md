@@ -19,7 +19,7 @@ SO THAT I can keep up with the latest information related to F1
 ```
 
 ## Screenshot
-Lorem Ipsum: ![]()
+![F1 Formula Frenzy](./assets/images/webpage.png)
 
 ## Link
 A link to the [code](https://github.com/Sccr0123/Formula-1-Frenzy):
