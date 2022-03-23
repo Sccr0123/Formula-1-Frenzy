@@ -277,13 +277,12 @@ function getUpcoming() {
 	$("#Upcoming4Img").attr("class", "bg-white");
 	$("#Upcoming4Name").html(upcoming[3].circuit);
 	$("#Upcoming4Date").attr("class", "fa fa-bolt");
-	$("#Upcoming4Date")
-			.html(
-				" " +
-					dayjs(upcoming[3].fp1).format("MMMM DD") +
-					" - " +
-					dayjs(upcoming[3].race).format("DD")
-			);
+	$("#Upcoming4Date").html(
+		" " +
+			dayjs(upcoming[3].fp1).format("MMMM DD") +
+			" - " +
+			dayjs(upcoming[3].race).format("DD")
+	);
 
 	//Prints The Next Race Box
 	getNext();

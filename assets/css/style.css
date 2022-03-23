@@ -9,9 +9,14 @@
 	--octonary-color: rgba(255, 255, 255, 0.5);
 	--nonary-color: rgba(0, 0, 0, 0.8);
 }
+
 body {
 	background-color: #1a222a;
 	font-family: Poppins;
+}
+
+header a {
+	text-decoration: none;
 }
 
 #newsapp {
@@ -32,6 +37,7 @@ h2 {
 	text-transform: uppercase;
 	align-items: center;
 	padding-left: 2%;
+	text-decoration: none;
 }
 
 #searchbtn,
