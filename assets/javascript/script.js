@@ -227,9 +227,10 @@ function getUpcoming() {
 				upcoming.push(curRaces[i]);
 			} else {
 				break;
-			}
-		}
-	}
+			};
+		};
+	};
+	
 	upcoming.shift();
 
 	//Upcoming 1
@@ -286,7 +287,7 @@ function getUpcoming() {
 
 	//Prints The Next Race Box
 	getNext();
-}
+};
 
 function getNext() {
 	var nextRace = {};
@@ -320,9 +321,9 @@ function getNext() {
 			$("#RaceDay").html(dayjs(nextRace.race).format("ddd"));
 			$("#RaceDate").html(dayjs(nextRace.race).format("MMMM DD"));
 			break;
-		}
-	}
-}
+		};
+	};
+};
 
 function getTopFour() {
 	var topFour = curDriversRank;
@@ -340,7 +341,7 @@ function getTopFour() {
 	$("#Driver2Img").attr("src", topFour[1].image);
 	$("#Driver2Img").attr("alt", "Driver Image");
 	$("#Driver2Img").attr("class", "bg-white");
-	$("#Driver2Name").html(`#1 ${topFour[1].name}`);
+	$("#Driver2Name").html(`#2 ${topFour[1].name}`);
 	$("#Driver2Points").html(`${topFour[1].points} points`);
 	$("#Driver2Team").html(topFour[1].team);
 
@@ -348,7 +349,7 @@ function getTopFour() {
 	$("#Driver3Img").attr("src", topFour[2].image);
 	$("#Driver3Img").attr("alt", "Driver Image");
 	$("#Driver3Img").attr("class", "bg-white");
-	$("#Driver3Name").html(`#1 ${topFour[2].name}`);
+	$("#Driver3Name").html(`#3 ${topFour[2].name}`);
 	$("#Driver3Points").html(`${topFour[2].points} points`);
 	$("#Driver3Team").html(topFour[2].team);
 
@@ -356,7 +357,7 @@ function getTopFour() {
 	$("#Driver4Img").attr("src", topFour[3].image);
 	$("#Driver4Img").attr("alt", "Driver Image");
 	$("#Driver4Img").attr("class", "bg-white");
-	$("#Driver4Name").html(`#1 ${topFour[3].name}`);
+	$("#Driver4Name").html(`#4 ${topFour[3].name}`);
 	$("#Driver4Points").html(`${topFour[3].points} points`);
 	$("#Driver4Team").html(topFour[3].team);
 }
