@@ -86,25 +86,14 @@ img.team_brand {
 /** Start Section Body Part 2 **/
 /* Style The Dropdown Button */
 .dropbtn {
-<<<<<<< HEAD
-    border: 1px solid rgba(255,255,255,0.5);
-    background: transparent;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 100;
-    letter-spacing: 1px;
-    border-radius: 10px;
-    padding: 3px 15px;
-=======
   border: 1px solid rgba(255, 255, 255, 0.5);
   background: transparent;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 100;
   letter-spacing: 1px;
   border-radius: 10px;
   padding: 3px 15px;
->>>>>>> feature/header
 }
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
@@ -138,100 +127,6 @@ img.team_brand {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-<<<<<<< HEAD
-background-color: #293947;
-}
-
-.fa-magnifying-glass{
-    color:white;
-}
-#news_body_feature
-{
-    position: relative;
-    margin-top: -90px;
-    background-color: #293947;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    z-index: 1;
-}
-
-.news_page_category .section_title
-{
-    color: #fff;
-    font-size: 20px;
-    margin-bottom: 30px;
-    display: inline-block;
-    margin-left: 2%;
-}
-
-.news_more_btn
-{
-    border: 1px solid rgba(255,255,255,0.5);
-    background: transparent;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 100;
-    letter-spacing: 1px;
-    border-radius: 10px;
-    padding: 3px 15px;
-}
-
-
-.team_featured_tile
-{
-    position: relative;
-    background-color: rgba(255,255,255,0.05);
-    border: 1px solid rgba(26,34,42,0.25);
-    padding: 15px;
-    margin-bottom:60px;
-    border-radius: 15px;
-    height:auto;
-}
-
-.team_featured_tile .team_brand
-{
-    width: 25px;
-}
-
-.team_featured_tile .team_img
-{
-    position: relative;
-    margin-top: 20px;
-    display: block;
-}
-
-
-.team_featured_tile .team_title
-{
-    color: #fff;
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    display: inline-block;
-    margin-top: 15px;
-}
-
-.team_featured_tile .team_cat
-{
-    display: block;
-    color: rgba(255,255,255,0.5);
-    font-size: 9px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;   
-}
-
-.team_featured_tile .team_newstitle
-{
-    color: #fff;
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    display: block;
-    margin-top: 10px;
-=======
   background-color: #293947;
 }
 
@@ -240,7 +135,7 @@ background-color: #293947;
 }
 #news_body_feature {
   position: relative;
-  /* margin-top: -90px; */
+
   background-color: #293947;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -249,7 +144,7 @@ background-color: #293947;
 
 .news_page_category .section_title {
   color: #fff;
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 30px;
   display: inline-block;
   margin-left: 2%;
@@ -259,7 +154,7 @@ background-color: #293947;
   border: 1px solid rgba(255, 255, 255, 0.5);
   background: transparent;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 100;
   letter-spacing: 1px;
   border-radius: 10px;
@@ -313,5 +208,4 @@ background-color: #293947;
   letter-spacing: 0.5px;
   display: block;
   margin-top: 10px;
->>>>>>> feature/header
 }
