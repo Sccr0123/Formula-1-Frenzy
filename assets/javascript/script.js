@@ -223,7 +223,6 @@ function storeNews(news) {
 }
 
 function displayNews(news) {
-	console.log(news);
 
 	var newsTitle1 = $("#NewsArt1");
 	var newsImg1 = $("#NewsImg1");
