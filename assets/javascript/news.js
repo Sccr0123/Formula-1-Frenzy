@@ -15,7 +15,7 @@ function getNews() {
 // });
 
 function displayNews(news) {
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 11; i++) {
     title = news[i].title;
     summary = news[i].summary;
     link = news[i].link;
@@ -28,8 +28,10 @@ function displayNews(news) {
 
     titleEl.textContent = title;
     summaryEl.textContent = summary;
-    linkEl.textContent = link;
+    linkEl.href = link;
+    //link may need to be title 1 . href
     photoEl.src = photo;
+    // console.log(titleEl);
   }
 }
 
