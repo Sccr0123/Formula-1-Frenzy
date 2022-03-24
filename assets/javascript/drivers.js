@@ -2,7 +2,6 @@ var curDriversRank = [];
 
 function getForumlaDriversRankings() {
 	curDriversRank = JSON.parse(localStorage.getItem("Drivers"));
-	console.log(curDriversRank);
 
 	getAll(curDriversRank);
 }

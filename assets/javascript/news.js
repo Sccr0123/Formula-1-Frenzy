@@ -6,7 +6,6 @@ var news = [];
 
 function getNews() {
 	news = JSON.parse(localStorage.getItem("News"));
-	console.log(news);
 	displayNews(news);
 }
 

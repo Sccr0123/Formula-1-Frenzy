@@ -2,8 +2,6 @@ var curRaces = [];
 
 function pullRaces() {
     curRaces = JSON.parse(localStorage.getItem("Races"));
-    
-    console.log(curRaces);
 
 	printRaces();
 }
