@@ -1,5 +1,4 @@
 # F1 Formula Frenzy
-
 [![MSU](https://img.shields.io/badge/MSU-Coding%20Bootcamp-green/)](https://bootcamp.msu.edu/)
 
 ## Technologies
@@ -7,6 +6,7 @@
 ![Technologies](https://img.shields.io/badge/-CSS-1572B6?logo=css3&logoColor=white)
 ![Technologies](https://img.shields.io/badge/-JavaScript-007396?logo=JavaScript&logoColor=white)
 ![Technologies](https://img.shields.io/badge/-Bootstrap-7952B3?logo=Bootstrap&logoColor=white)
+![Technologies](https://img.shields.io/badge/-Git-F05032?logo=Git&logoColor=white)
 ![Technologies](https://img.shields.io/badge/-jQuery-0769AD?logo=jQuery&logoColor=white)
 ![Technologies](https://img.shields.io/badge/-jQueryUI-b24926?logoColor=white)
 ![Technologies](https://img.shields.io/badge/-MomentJS-33cc33?logoColor=white)
