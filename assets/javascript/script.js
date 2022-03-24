@@ -7,7 +7,6 @@ var curDate = dayjs().format("YYYY-MM-DD");
 var curRaces = [];
 var curConstructorsRank = [];
 var curDriversRank = [];
-var news = [];
 var upcoming = [];
 
 //Gets Race Info Including Free Practice, Quali, Name, and Track Image
@@ -213,26 +212,36 @@ function getNews() {
 		})
 		.then(function (data) {
 			//console logs all articles
-			news = data.articles;
-			storeNews();
+			var news = data.articles;
+			storeNews(news);
 			displayNews(news);
 		});
 }
 
-function storeNews() {
+function storeNews(news) {
 	localStorage.setItem("News", JSON.stringify(news));
 }
 
 function displayNews(news) {
-	var newsTitle1El = document.querySelector("#newsarticle1");
-	var newsTitle2El = document.querySelector("#newsarticle2");
-	var newsTitle3El = document.querySelector("#newsarticle3");
-	var newsTitle4El = document.querySelector("#newsarticle4");
+	console.log(news);
 
-	newsTitle1El.textContent = news[0].title;
-	newsTitle2El.textContent = news[1].title;
-	newsTitle3El.textContent = news[2].title;
-	newsTitle4El.textContent = news[4].title;
+	var newsTitle1 = $("#NewsArt1");
+	var newsImg1 = $("#NewsImg1");
+	var newsTitle2 = $("#NewsArt2");
+	var newsImg2 = $("#NewsImg2");
+	var newsTitle3 = $("#NewsArt3");
+	var newsImg3 = $("#NewsImg3");
+	var newsTitle4 = $("#NewsArt4");
+	var newsImg4 = $("#NewsImg4");
+
+	newsTitle1.text(news[0].title);
+	newsImg1.attr("src", news[0].media);
+	newsTitle2.text(news[1].title);
+	newsImg2.attr("src", news[1].media);
+	newsTitle3.text(news[2].title);
+	newsImg3.attr("src", news[2].media);
+	newsTitle4.text(news[4].title);
+	newsImg4.attr("src", news[3].media);
 }
 
 function getUpcoming() {
