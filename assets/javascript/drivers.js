@@ -15,9 +15,16 @@ function getAll(driverRank) {
 		$("#Driver" + (i + 1).toString() + "Name").html(
 			`#${i + 1} ${topAll[i].name}`
 		);
+		if (topAll[i].points != null) {
 		$("#Driver" + (i + 1).toString() + "Points").html(
 			`${topAll[i].points} points`
 		);
+		}
+		else {
+			$("#Driver" + (i + 1).toString() + "Points").html(
+				`0 point`
+			);
+		}
 		$("#Driver" + (i + 1).toString() + "Team").html(topAll[i].team);
 	}
 }
