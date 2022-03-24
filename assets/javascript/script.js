@@ -115,6 +115,8 @@ function getForumlaOneRaces() {
 				}
 			}
 
+			localStorage.setItem("Races", JSON.stringify(curRaces));
+
 			getUpcoming();
 		});
 }
