@@ -7,7 +7,6 @@ var curDate = dayjs().format("YYYY-MM-DD");
 var curRaces = [];
 var curConstructorsRank = [];
 var curDriversRank = [];
-var news = [];
 var upcoming = [];
 
 //Gets Race Info Including Free Practice, Quali, Name, and Track Image
@@ -115,6 +114,8 @@ function getForumlaOneRaces() {
 				}
 			}
 
+			localStorage.setItem("Races", JSON.stringify(curRaces));
+
 			getUpcoming();
 		});
 }
@@ -152,7 +153,7 @@ function getForumlaDriversRankings() {
 			}
 			localStorage.setItem("Drivers", JSON.stringify(curDriversRank));
 
-			getTopFour();
+			getTopFour(curDriversRank);
 		});
 }
 
@@ -195,39 +196,51 @@ function getForumlaConstructorsRankings() {
 }
 
 function getNews() {
-  fetch("https://free-news.p.rapidapi.com/v1/search?q=%22formula%201%22&lang=en", {
-    method: "GET",
-    headers: {
-      "x-rapidapi-host": "free-news.p.rapidapi.com",
-      "x-rapidapi-key": "8de0284a1cmsh07a10a500bcd8fep183aa6jsn9849ab29551e",
-    },
-  })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      //console logs all articles
-      news = data.articles;
-      storeNews();
-      displayNews(news);
-    });
+	fetch(
+		"https://free-news.p.rapidapi.com/v1/search?q=%22formula%201%22&lang=en",
+		{
+			method: "GET",
+			headers: {
+				"x-rapidapi-host": "free-news.p.rapidapi.com",
+				"x-rapidapi-key":
+					"8de0284a1cmsh07a10a500bcd8fep183aa6jsn9849ab29551e",
+			},
+		}
+	)
+		.then(function (response) {
+			return response.json();
+		})
+		.then(function (data) {
+			//console logs all articles
+			var news = data.articles;
+			storeNews(news);
+			displayNews(news);
+		});
 }
 
-function storeNews() {
-  localStorage.setItem("News", JSON.stringify(news));
+function storeNews(news) {
+	localStorage.setItem("News", JSON.stringify(news));
 }
 
 function displayNews(news) {
-  console.log(news);
-  var newsTitle1El = document.querySelector("#newsarticle1");
-  var newsTitle2El = document.querySelector("#newsarticle2");
-  var newsTitle3El = document.querySelector("#newsarticle3");
-  var newsTitle4El = document.querySelector("#newsarticle4");
 
-  newsTitle1El.textContent = news[0].title;
-  newsTitle2El.textContent = news[1].title;
-  newsTitle3El.textContent = news[2].title;
-  newsTitle4El.textContent = news[4].title;
+	var newsTitle1 = $("#NewsArt1");
+	var newsImg1 = $("#NewsImg1");
+	var newsTitle2 = $("#NewsArt2");
+	var newsImg2 = $("#NewsImg2");
+	var newsTitle3 = $("#NewsArt3");
+	var newsImg3 = $("#NewsImg3");
+	var newsTitle4 = $("#NewsArt4");
+	var newsImg4 = $("#NewsImg4");
+
+	newsTitle1.text(news[0].title);
+	newsImg1.attr("src", news[0].media);
+	newsTitle2.text(news[1].title);
+	newsImg2.attr("src", news[1].media);
+	newsTitle3.text(news[2].title);
+	newsImg3.attr("src", news[2].media);
+	newsTitle4.text(news[4].title);
+	newsImg4.attr("src", news[3].media);
 }
 
 function getUpcoming() {
@@ -237,10 +250,10 @@ function getUpcoming() {
 				upcoming.push(curRaces[i]);
 			} else {
 				break;
-			};
-		};
-	};
-	
+			}
+		}
+	}
+
 	upcoming.shift();
 
 	//Upcoming 1
@@ -297,7 +310,7 @@ function getUpcoming() {
 
 	//Prints The Next Race Box
 	getNext();
-};
+}
 
 function getNext() {
 	var nextRace = {};
@@ -331,12 +344,12 @@ function getNext() {
 			$("#RaceDay").html(dayjs(nextRace.race).format("ddd"));
 			$("#RaceDate").html(dayjs(nextRace.race).format("MMMM DD"));
 			break;
-		};
-	};
-};
+		}
+	}
+}
 
-function getTopFour() {
-	var topFour = curDriversRank;
+function getTopFour(driverRank) {
+	var topFour = driverRank;
 	topFour.length = 4;
 
 	//1st Place
