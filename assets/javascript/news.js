@@ -1,7 +1,3 @@
-// Search options
-// %22formula%201%22
-// f1
-
 var news = [];
 
 function getNews() {
@@ -15,7 +11,7 @@ function getNews() {
 // });
 
 function displayNews(news) {
-  for (i = 0; i < 11; i++) {
+  for (i = 0; i < 13; i++) {
     title = news[i].title;
     summary = news[i].summary;
     link = news[i].link;
@@ -29,9 +25,7 @@ function displayNews(news) {
     titleEl.textContent = title;
     summaryEl.textContent = summary;
     linkEl.href = link;
-    //link may need to be title 1 . href
     photoEl.src = photo;
-    // console.log(titleEl);
   }
 }
 
