@@ -173,7 +173,6 @@ img.team_brand {
 	border: 1px solid rgba(26, 34, 42, 0.25);
 	border-radius: 15px;
 	height: auto;
-	padding-left: 10px;
 }
 
 .team_featured_tile .team_brand {
@@ -183,6 +182,8 @@ img.team_brand {
 .team_featured_tile .team_img {
 	position: relative;
 	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-left: 40px;
 	/* display: block; */
 }
 
