@@ -1,4 +1,4 @@
-# F1 Formula Frenzy
+# Formula 1 Frenzy
 [![MSU](https://img.shields.io/badge/MSU-Coding%20Bootcamp-green/)](https://bootcamp.msu.edu/)
 
 ## Technologies
@@ -24,13 +24,15 @@ SO THAT I can keep up with the latest information related to F1
 
 ## Acceptance Criteria
 ```
-GIVEN
-WHEN
-THEN
-WHEN
-THEN
-WHEN
-THEN
+GIVEN I want information on the Formula F1 Races
+WHEN I open the webpage
+THEN the current race, upcoming race, drivers, and news are presented
+WHEN I press the View All for Upcoming
+THEN I am presented a schedule of future races
+WHEN I press the View All for Driver's Standings
+THEN I presented a list of all the drivers participating 
+WHEN I press the View All for News
+THEN I am presented with the latest news for F1 and other current news
 ```
 
 ## Screenshot
@@ -42,13 +44,13 @@ A link to the [code](https://github.com/Sccr0123/Formula-1-Frenzy):
 https://github.com/Sccr0123/Formula-1-Frenzy
 ```
 
-A link to the deployed [URL]():
+A link to the deployed [URL](https://sccr0123.github.io/Formula-1-Frenzy/):
 ```
-
+https://sccr0123.github.io/Formula-1-Frenzy/
 ```
 
 ## Developers
-- :computer: [Zach Thomas](https://github.com/Sccr0123)
+- :computer: [Zach Thomas](https://github.com/Sccr0123) (Project Manager)
 - :computer: [Juan Garcia](https://github.com/jgarcia45)
 - :computer: [Manny Garcia](https://github.com/mannygarcia98)
 - :computer: [Chen Wang](https://github.com/wangheer2010)
