@@ -2,285 +2,290 @@
 <html>
 
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
-	<title>Formula 1 Frenzy</title>
-
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
-	<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+    <title>Formula 1 Frenzy</title>
 </head>
-    <body>
-        <!-- Header -->
-        <div class="row col-12">
-            <header class = "col-11">
-                <a href="./index.html">
-                    <h1>Formula 1 News App</h1>
-                </a>
-            </header>
-            <div class="col-1 dropdown text-right">
-                <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content">
-                    <a href="#Upcoming">Upcoming</a>
-                    <a href="#Drivers">Driver’s Standing</a>
-                    <a href="#News">News</a>
-                </div>
-            </div>
-            <div class="col-1">
-                <i class="fa-solid fa-magnifying-glass"></i>
+
+<body>
+    <!-- Header -->
+    <div class="row col-12">
+        <header class="col-11">
+            <a href="./index.html">
+                <h1>Formula 1 News App</h1>
+            </a>
+        </header>
+        <div class="col-1 dropdown text-right">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#Upcoming">Upcoming</a>
+                <a href="#Drivers">Driver’s Standing</a>
+                <a href="#News">News</a>
             </div>
         </div>
-
-		<!-- Next Race -->
-
-        <div class="row">
-            <section class="col-11 col-md-7 col-lg-8 col-xl-7 mx-auto bg-dark p-4">
-                <div class="row">
-                    <div class="col-12 col-lg-5 text-center text-white">
-                        <div class="row">
-                            <h2 class="col-12 fs-1 fw-bold" id="GrandPrix"></h2>
-                            <h3 class="col-12 fs-2" id="EventDate"></h3>
-                            <div class="col-7 col-lg-10 mx-auto mt-3 bg-light rounded">
-                                <img id="TrackImg"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-7 m-auto mt-3 mt-0-lg text-center text-white">
-                        <div class="row py-1">
-                            <p class="col-5 fs-4">Practice 1</p>
-                            <p class="col-2 fs-4" id="P1Day"></p>
-                            <p class="col-5 fs-4" id="P1Date"></p>
-                        </div>
-                        <div class="row py-1">
-                            <p class="col-5 fs-4">Practice 2</p>
-                            <p class="col-2 fs-4" id="P2Day"></p>
-                            <p class="col-5 fs-4" id="P2Date"></p>
-                        </div>
-                        <div class="row py-1">
-                            <p class="col-5 fs-4">Practice 3</p>
-                            <p class="col-2 fs-4" id="P3Day"></p>
-                            <p class="col-5 fs-4" id="P3Date"></p>
-                        </div>
-                        <div class="row py-1">
-                            <p class="col-5 fs-4">Qualifying</p>
-                            <p class="col-2 fs-4" id="QualiDay"></p>
-                            <p class="col-5 fs-4" id="QualiDate"></p>
-                        </div>
-                        <div class="row py-1">
-                            <p class="col-5 fs-4">Race</p>
-                            <p class="col-2 fs-4" id="RaceDay"></p>
-                            <p class="col-5 fs-4" id="RaceDate"></p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <div class="col-1">
+            <i class="fa-solid fa-magnifying-glass"></i>
         </div>
+    </div>
 
+    <!-- Next Race -->
 
-
-        <!-- Upcoming -->
-        <row>
-            <section id="news_body_feature" class="col-12">
-                <div class="row news_page_category">
-                    <div class="col-11">
-                        <span class="section_title"> Upcoming </span>
-                    </div>
-                    <div class="col-1 text-right">
-                        <a href="./calendar.html">
-                            <button class="news_more_btn" type="button">View All</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="row news_feature_teams">
-                    <div class="col-xs-5 col-md-3">
-                        <div class="team_featured_tile row">
-                            <div class="team_img col-4">
-                                <img id="Upcoming1Img"/>
-                            </div>
-                            <div class="textcolumn col-8">
-                                <div class="team_title" id="Upcoming1Name"></div>
-                                <div class="team_newstitle col-8">
-                                    <i id="Upcoming1Date"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-5 col-md-3">
-                        <div class="team_featured_tile row">
-                            <div class="team_img col-4">
-                                <img id="Upcoming2Img"/>
-                            </div>
-                            <div class="textcolumn col-8">
-                                <div class="team_title" id="Upcoming2Name"></div>
-                                <div class="team_newstitle col-8">
-                                    <i id="Upcoming2Date"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-5 col-md-3">
-                        <div class="team_featured_tile row">
-                            <div class="team_img col-4">
-                                <img id="Upcoming3Img"/>
-                            </div>
-                            <div class="textcolumn col-8">
-                                <div class="team_title" id="Upcoming3Name"></div>
-                                <div class="team_newstitle col-8">
-                                    <i id="Upcoming3Date"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-xs-5 col-md-3">
-                        <div class="team_featured_tile row">
-                            <div class="team_img col-4">
-                                <img id="Upcoming4Img"/>
-                            </div>
-                            <div class="textcolumn col-8">
-                                <div class="team_title" id="Upcoming4Name"></div>
-                                <div class="team_newstitle col-8">
-                                    <i id="Upcoming4Date"></i>
-                                </div>
-                            </div>
+    <div class="row">
+        <section class="col-11 col-md-7 col-lg-8 col-xl-7 mx-auto bg-dark p-4">
+            <div class="row">
+                <div class="col-12 col-lg-5 text-center text-white">
+                    <div class="row">
+                        <h2 class="col-12 fs-1 fw-bold" id="GrandPrix"></h2>
+                        <h3 class="col-12 fs-2" id="EventDate"></h3>
+                        <div class="col-7 col-lg-10 mx-auto mt-3 bg-light rounded">
+                            <img id="TrackImg" />
                         </div>
                     </div>
                 </div>
-            </section>
-        </row>
+                <div class="col-12 col-lg-7 m-auto mt-3 mt-0-lg text-center text-white">
+                    <div class="row py-1">
+                        <p class="col-5 fs-4">Practice 1</p>
+                        <p class="col-2 fs-4" id="P1Day"></p>
+                        <p class="col-5 fs-4" id="P1Date"></p>
+                    </div>
+                    <div class="row py-1">
+                        <p class="col-5 fs-4">Practice 2</p>
+                        <p class="col-2 fs-4" id="P2Day"></p>
+                        <p class="col-5 fs-4" id="P2Date"></p>
+                    </div>
+                    <div class="row py-1">
+                        <p class="col-5 fs-4">Practice 3</p>
+                        <p class="col-2 fs-4" id="P3Day"></p>
+                        <p class="col-5 fs-4" id="P3Date"></p>
+                    </div>
+                    <div class="row py-1">
+                        <p class="col-5 fs-4">Qualifying</p>
+                        <p class="col-2 fs-4" id="QualiDay"></p>
+                        <p class="col-5 fs-4" id="QualiDate"></p>
+                    </div>
+                    <div class="row py-1">
+                        <p class="col-5 fs-4">Race</p>
+                        <p class="col-2 fs-4" id="RaceDay"></p>
+                        <p class="col-5 fs-4" id="RaceDate"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!-- Upcoming -->
+    <row>
+        <section id="news_body_feature" class="col-12">
+            <div class="row news_page_category">
+                <div class="col-11">
+                    <span class="section_title"> Upcoming </span>
+                </div>
+                <div class="col-1 text-right">
+                    <a href="./calendar.html">
+                        <button class="news_more_btn" type="button">View All</button>
+                    </a>
+                </div>
+            </div>
+            <div class="row news_feature_teams">
+                <div class="col-xs-5 col-md-3">
+                    <div class="team_featured_tile row">
+                        <div class="team_img col-4">
+                            <img id="Upcoming1Img" />
+                        </div>
+                        <div class="textcolumn col-8">
+                            <div class="team_title" id="Upcoming1Name"></div>
+                            <div class="team_newstitle col-8">
+                                <i id="Upcoming1Date"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-5 col-md-3">
+                    <div class="team_featured_tile row">
+                        <div class="team_img col-4">
+                            <img id="Upcoming2Img" />
+                        </div>
+                        <div class="textcolumn col-8">
+                            <div class="team_title" id="Upcoming2Name"></div>
+                            <div class="team_newstitle col-8">
+                                <i id="Upcoming2Date"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-5 col-md-3">
+                    <div class="team_featured_tile row">
+                        <div class="team_img col-4">
+                            <img id="Upcoming3Img" />
+                        </div>
+                        <div class="textcolumn col-8">
+                            <div class="team_title" id="Upcoming3Name"></div>
+                            <div class="team_newstitle col-8">
+                                <i id="Upcoming3Date"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-5 col-md-3">
+                    <div class="team_featured_tile row">
+                        <div class="team_img col-4">
+                            <img id="Upcoming4Img" />
+                        </div>
+                        <div class="textcolumn col-8">
+                            <div class="team_title" id="Upcoming4Name"></div>
+                            <div class="team_newstitle col-8">
+                                <i id="Upcoming4Date"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </row>
     </row>
 
-        <row>
-            <section id="news_body_feature" class="col-12">
-                <div class="row news_page_category">
-                    <div class="col-11">
-                        <span class="section_title" id="Drivers"> Driver's Standings </span>
-                    </div>
-                    <div class="col-1 text-right">
-                        <a href="./drivers.html">
-                            <button class="news_more_btn" type="button">View All</button>
-                        </a>
+    <row>
+        <section id="news_body_feature" class="col-12">
+            <div class="row news_page_category">
+                <div class="col-11">
+                    <span class="section_title" id="Drivers"> Driver's Standings </span>
+                </div>
+                <div class="col-1 text-right">
+                    <a href="./drivers.html">
+                        <button class="news_more_btn" type="button">View All</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row news_feature_teams">
+                <div class="col-xs-5 col-md-3">
+                    <div class="team_featured_tile row">
+                        <div class="team_img col-4">
+                            <img id="Driver1Img" />
+                        </div>
+                        <div class="textcolumn col-8">
+                            <div class="team_title col-12" id="Driver1Name"></div>
+                            <div class="team_title col-12" id="Driver1Points"></div>
+                            <div class="team_newstitle col-12" id="Driver1Team"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="row news_feature_teams">
-                    <div class="col-xs-5 col-md-3">
-                        <div class="team_featured_tile row">
-                            <div class="team_img col-4">
-                                <img id="Driver1Img"/>
-                            </div>
-                            <div class="textcolumn col-8">
-                                <div class="team_title col-12" id="Driver1Name"></div>
-                                <div class="team_title col-12" id="Driver1Points"></div>
-                                <div class="team_newstitle col-12" id="Driver1Team"></div>
-                            </div>
+                <div class="col-xs-5 col-md-3">
+                    <div class="team_featured_tile row">
+                        <div class="team_img col-4">
+                            <img id="Driver2Img" />
                         </div>
-                    </div>
-
-                    <div class="col-xs-5 col-md-3">
-                        <div class="team_featured_tile row">
-                            <div class="team_img col-4">
-                                <img id="Driver2Img"/>
-                            </div>
-                            <div class="textcolumn col-8">
-                                <div class="team_title col-12" id="Driver2Name"></div>
-                                <div class="team_title  col-12" id="Driver2Points"></div>
-                                <div class="team_newstitle col-12" id="Driver2Team"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-5 col-md-3">
-                        <div class="team_featured_tile row">
-                            <div class="team_img col-4">
-                                <img id="Driver3Img"/>
-                            </div>
-                            <div class="textcolumn col-8">
-                                <div class="team_title col-12" id="Driver3Name"></div>
-                                <div class="team_title col-12" id="Driver3Points"></div>
-                                <div class="team_newstitle col-12" id="Driver3Team"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-xs-5 col-md-3">
-                        <div class="team_featured_tile row">
-                            <div class="team_img col-4">
-                                <img id="Driver4Img"/>
-                            </div>
-                            <div class="textcolumn col-8">
-                                <div class="team_title col-12" id="Driver4Name"></div>
-                                <div class="team_title col-12" id="Driver4Points"></div>
-                                <div class="team_newstitle col-12" id="Driver4Team"></div>
-                            </div>
+                        <div class="textcolumn col-8">
+                            <div class="team_title col-12" id="Driver2Name"></div>
+                            <div class="team_title  col-12" id="Driver2Points"></div>
+                            <div class="team_newstitle col-12" id="Driver2Team"></div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </row>
 
-        <!-- News -->
-        <row>
-            <section id="news_body_feature" class="col-12">
-                <div class="row news_page_category">
-                    <div class="col-11">
-                        <span class="section_title" id="News"> News </span>
-                    </div>
-                    <div class="col-1 text-right">
-                        <a href="./news.html">
-                            <button class="news_more_btn" type="button">View All</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="row news_feature_teams">
-                    <div class="col-xs-5 col-md-3">
-                        <div class="team_featured_tile row h-100">
-                            <div class="team_img col-4">
-                                <img alt="News Preview" id="NewsImg1"/>
-                            </div>
-                            <div class="textcolumn col-8">
-                                <div class="team_title" id="NewsArt1">event name</div>
-                            </div>
+                <div class="col-xs-5 col-md-3">
+                    <div class="team_featured_tile row">
+                        <div class="team_img col-4">
+                            <img id="Driver3Img" />
                         </div>
-                    </div>
-                    <div class="col-xs-5 col-md-3">
-                        <div class="team_featured_tile row h-100">
-                            <div class="team_img col-4">
-                                <img alt="News Preview" id="NewsImg2"/>
-                            </div>
-                            <div class="textcolumn col-8">
-                                <div class="team_title" id="NewsArt2">event name</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-5 col-md-3">
-                        <div class="team_featured_tile row h-100">
-                            <div class="team_img col-4">
-                                <img alt="News Preview" id="NewsImg3"/>
-                            </div>
-                            <div class="textcolumn col-8">
-                                <div class="team_title" id="NewsArt3">event name</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-5 col-md-3">
-                        <div class="team_featured_tile row h-100">
-                            <div class="team_img col-4">
-                                <img alt="News Preview" id="NewsImg4"/>
-                            </div>
-                            <div class="textcolumn col-8">
-                                <div class="team_title" id="NewsArt4">event name</div>
-                            </div>
+                        <div class="textcolumn col-8">
+                            <div class="team_title col-12" id="Driver3Name"></div>
+                            <div class="team_title col-12" id="Driver3Points"></div>
+                            <div class="team_newstitle col-12" id="Driver3Team"></div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </row>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.0/dayjs.min.js"></script>
-		<script src="./assets/javascript/script.js"></script>
-	</body>
+
+                <div class="col-xs-5 col-md-3">
+                    <div class="team_featured_tile row">
+                        <div class="team_img col-4">
+                            <img id="Driver4Img" />
+                        </div>
+                        <div class="textcolumn col-8">
+                            <div class="team_title col-12" id="Driver4Name"></div>
+                            <div class="team_title col-12" id="Driver4Points"></div>
+                            <div class="team_newstitle col-12" id="Driver4Team"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </row>
+
+    <!-- News -->
+    <row>
+        <section id="news_body_feature" class="col-12">
+            <div class="row news_page_category">
+                <div class="col-11">
+                    <span class="section_title" id="News"> News </span>
+                </div>
+                <div class="col-1 text-right">
+                    <a href="./news.html">
+                        <button class="news_more_btn" type="button">View All</button>
+                    </a>
+                </div>
+            </div>
+            <div class="row news_feature_teams">
+                <div class="col-xs-5 col-md-3">
+                    <div class="team_featured_tile row h-100">
+                        <div class="team_img col-4">
+                            <img alt="News Preview" id="NewsImg1" />
+                        </div>
+                        <div class="textcolumn col-8">
+                            <div class="team_title" id="NewsArt1">event name</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-5 col-md-3">
+                    <div class="team_featured_tile row h-100">
+                        <div class="team_img col-4">
+                            <img alt="News Preview" id="NewsImg2" />
+                        </div>
+                        <div class="textcolumn col-8">
+                            <div class="team_title" id="NewsArt2">event name</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-5 col-md-3">
+                    <div class="team_featured_tile row h-100">
+                        <div class="team_img col-4">
+                            <img alt="News Preview" id="NewsImg3" />
+                        </div>
+                        <div class="textcolumn col-8">
+                            <div class="team_title" id="NewsArt3">event name</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-5 col-md-3">
+                    <div class="team_featured_tile row h-100">
+                        <div class="team_img col-4">
+                            <img alt="News Preview" id="NewsImg4" />
+                        </div>
+                        <div class="textcolumn col-8">
+                            <div class="team_title" id="NewsArt4">event name</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </row>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.0/dayjs.min.js"></script>
+    <script src="./assets/javascript/script.js"></script>
+</body>
+
 </html>
