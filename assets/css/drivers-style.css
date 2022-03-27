@@ -19,6 +19,10 @@ header a {
 	text-decoration: none;
 }
 
+.headline {
+    margin-bottom: 30px;
+}
+
 #newsapp {
 	padding-top: 68px;
 }
@@ -82,64 +86,19 @@ img.team_brand {
 }
 
 .team_img img {
-	height: 52px;
+	height: 200px;
 	left: 0;
 	top: 0;
+}
+
+#Driver17Img {
+    width: 200px;
 }
 
 /** End Section Body Part 1 **/
 
 /** Start Section Body Part 2 **/
-/* Style The Dropdown Button */
-.dropbtn {
-	border: 1px solid rgba(255, 255, 255, 0.5);
-	background: transparent;
-	color: #fff;
-	font-size: 12px;
-	font-weight: 100;
-	letter-spacing: 1px;
-	border-radius: 10px;
-	padding: 3px 15px;
-}
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #5b7c8b;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: inline-flex;
-	font-size: 10px;
-	font-weight: 500;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-	background-color: rgba(255, 255, 255, 0.5);
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-	display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-	background-color: #293947;
-}
-
-.fa-magnifying-glass {
-	color: white;
-}
 #news_body_feature {
 	position: relative;
 	background-color: #293947;
@@ -182,14 +141,12 @@ img.team_brand {
 .team_featured_tile .team_img {
 	position: relative;
 	margin-top: 20px;
-	margin-bottom: 20px;
-	padding-left: 40px;
 	/* display: block; */
 }
 
 .team_featured_tile .team_title {
 	color: #fff;
-	font-size: 12px;
+	font-size: 20px;
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;

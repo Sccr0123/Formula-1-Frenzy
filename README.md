@@ -1,5 +1,4 @@
-# F1 Formula Frenzy
-
+# Formula 1 Frenzy
 [![MSU](https://img.shields.io/badge/MSU-Coding%20Bootcamp-green/)](https://bootcamp.msu.edu/)
 
 ## Technologies
@@ -7,15 +6,33 @@
 ![Technologies](https://img.shields.io/badge/-CSS-1572B6?logo=css3&logoColor=white)
 ![Technologies](https://img.shields.io/badge/-JavaScript-007396?logo=JavaScript&logoColor=white)
 ![Technologies](https://img.shields.io/badge/-Bootstrap-7952B3?logo=Bootstrap&logoColor=white)
+![Technologies](https://img.shields.io/badge/-Git-F05032?logo=Git&logoColor=white)
+![Technologies](https://img.shields.io/badge/-jQuery-0769AD?logo=jQuery&logoColor=white)
+![Technologies](https://img.shields.io/badge/-jQueryUI-b24926?logoColor=white)
+![Technologies](https://img.shields.io/badge/-MomentJS-33cc33?logoColor=white)
+![Technologies](https://img.shields.io/badge/-API-1a8cff?logoColor=white)
 
 ## Description
-As F1 Formula fans, there is a need to view F1 Formula news, teams, and races at a simpler design. For that reason, we designed and developed a simple application that allows users to keep track of the news, teams, and events related to the F1 Formula race. The front-end of the application was developed in HTML, CSS, and Bootstrap. The back-end of the application was developed in JavaScript. We used two different APIs to gather the information of the F1 Formula. The first API that we used was [api-sports](https://rapidapi.com/api-sports/api/api-formula-1/). The second API that we used was [newscatcher-api](https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/free-news/).
+As F1 Formula fans, there is a need to view F1 Formula news, teams, and races at a simpler design. For that reason, we designed and developed a simple application that allows users to keep track of the news, teams, and events related to the F1 Formula race. The front-end of the application was developed in HTML, CSS, and Bootstrap. The back-end of the application was developed in JavaScript. We used two different APIs to gather the information of the F1 Formula. The first API that we used was [api-sports](https://api-sports.io/documentation/formula-1/v1). The second API that we used was [newscatcher-api](https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/free-news/).
 
 ## User Story
 ```
 AS A devoted F1 fan 
 I WANT to see F1 news, teams, and upcoming races
 SO THAT I can keep up with the latest information related to F1
+```
+
+## Acceptance Criteria
+```
+GIVEN I want information on the Formula F1 Races
+WHEN I open the webpage
+THEN the current race, upcoming race, drivers, and news are presented
+WHEN I press the View All for Upcoming
+THEN I am presented a schedule of future races
+WHEN I press the View All for Driver's Standings
+THEN I presented a list of all the drivers participating 
+WHEN I press the View All for News
+THEN I am presented with the latest news for F1 and other current news
 ```
 
 ## Screenshot
@@ -27,14 +44,14 @@ A link to the [code](https://github.com/Sccr0123/Formula-1-Frenzy):
 https://github.com/Sccr0123/Formula-1-Frenzy
 ```
 
-A link to the deployed [URL]():
+A link to the deployed [URL](https://sccr0123.github.io/Formula-1-Frenzy/):
 ```
-
+https://sccr0123.github.io/Formula-1-Frenzy/
 ```
 
 ## Developers
-- :computer: Juan Garcia
-- :computer: Manny Garcia
-- :computer: Zach Thomas
-- :computer: Chen Wang
-- :computer:  Mo Yang
+- :computer: [Zach Thomas](https://github.com/Sccr0123) (Project Manager)
+- :computer: [Juan Garcia](https://github.com/jgarcia45)
+- :computer: [Manny Garcia](https://github.com/mannygarcia98)
+- :computer: [Chen Wang](https://github.com/wangheer2010)
+- :computer:  [Mo Yang](https://github.com/moyangdev)
